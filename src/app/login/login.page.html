@@ -1,0 +1,50 @@
+<div class="login-wrapper">
+  <ion-content>
+    <div class="login-form-wrapper" [formGroup]="loginForm">
+      <!-- <div *ngIf="showError" class="my-notify-error">
+        Alias y/o Contraseña Incorrectos
+      </div> -->
+      <div class="alert" *ngIf="showError" >
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          {{ errorMessage }}
+        </div>
+      <div>
+        <ion-item class="login-input" color="transparent">
+          <ion-icon name="person"></ion-icon>
+          <input type="text" placeholder="Alias" formControlName="user">
+        </ion-item>
+      </div>
+      <div>
+        <ion-item class="login-input" color="transparent">
+          <ion-icon name="lock"></ion-icon>
+          <input type="password" placeholder="Contraseña" formControlName="password">
+        </ion-item>   
+      </div>
+      <div class="divider"></div>
+      <button [disabled]="loading" class="login-button" [disabled]="loginForm.invalid" (click)="doLogin()">
+        <ng-container *ngIf="!loading">ACCEDER</ng-container>
+        <ng-container *ngIf="loading">
+          <ion-spinner></ion-spinner>
+        </ng-container>
+      </button>
+      <button class="login-button" (click)="register()">
+        ¿Aún no tienes cuenta?
+      </button>
+    </div>
+  </ion-content>
+</div>
+
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+document.write(1);
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>

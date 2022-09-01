@@ -1,0 +1,130 @@
+// .register-wrapper {
+//     width: 100%;
+//     height: 100%;
+  
+//     .header {
+//       height: 50px;
+//       text-align: center;
+//       line-height: 45px;
+//       color: #0079c8;
+//       font-weight: bold;
+//       background: white;
+//       position: relative;
+  
+//       .logout-icon {
+//         font-size: 30px;
+//         position: absolute;
+//         left: 10px;
+//         top: 8px;
+//       }
+//     }
+// }
+
+.register-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/assets/login-img.png') no-repeat top center/cover;
+
+  ion-content {
+    --background: rgba(0,0,0,0.6);
+  }
+
+  .texto {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .alert {
+    // padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+  .form-inputs {
+
+  }
+  
+  
+
+  .register-form-wrapper {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 50px;
+    margin: 10px;
+
+
+    .form-group {
+      position: relative;
+      width: 300px;
+      height: 40px;
+      margin: 10px auto;
+      border-bottom: 2px solid white;
+
+      input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        padding-left: 35px;
+        border: none;
+        color: white;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      ion-icon {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        font-size: 25px;
+        color: white;
+      }
+    }
+
+    .divider {
+      height: 30px;
+    }
+
+    .register-button {
+      display: block;
+      width: 300px;
+      height: 40px;
+      margin: 15px auto 0 auto;
+      background: rgba(white, .8);
+      text-align: center;
+      line-height: 35px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  }
+}

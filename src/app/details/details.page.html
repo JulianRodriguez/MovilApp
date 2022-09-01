@@ -1,0 +1,9 @@
+<div class="details-wrapper" *ngIf="product">
+  <div class="header" (click)="goBack()">
+    <ion-icon name="arrow-back"></ion-icon>
+    <div class="header-title">Detalle</div>
+  </div>
+  <img [src]="image">
+  <div class="title">{{ product.name }}</div>
+  <div class="description">{{ product.description }}</div>
+</div>

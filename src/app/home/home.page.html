@@ -1,0 +1,24 @@
+<div class="home-wrapper">
+  <div class="header">
+    Últimos escaneos
+    <ion-icon class="logout-icon" name="log-out" (click)="logout()"></ion-icon>
+  </div>
+  <ion-content>
+    <div class="no-products" *ngIf="products?.length === 0">
+      No hay escaneos previos
+    </div>
+    <div class="qr-list-wrapper" *ngIf="products.length > 0">
+      <div class="product-element" *ngFor="let product of products" (click)="openDetail(product)">
+        <div class="product-image">
+          <img [src]="getImage(product)">
+        </div>
+        <div class="product-title">
+          <div>{{ product.name }}</div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <div class="footer">
+    <button class="scan-button" (click)="scanQR()">Escanear QR</button>
+  </div>
+</div>
